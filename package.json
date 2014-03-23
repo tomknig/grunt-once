@@ -1,0 +1,51 @@
+{
+  "name": "grunt-once",
+  "description": "Opens HTML files with PhantomJS and saves their DOM to a new file when certain criteria are met.",
+  "version": "0.4.2",
+  "homepage": "https://github.com/tomknig/grunt-once",
+  "author": {
+    "name": "Tom König",
+    "email": "hi@tomknig.de"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/tomknig/grunt-once.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tomknig/grunt-once/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/tomknig/grunt-once/blob/master/LICENSE-MIT"
+    }
+  ],
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "devDependencies": {
+    "grunt-contrib-jshint": "~0.6.0",
+    "grunt-contrib-clean": "~0.4.0",
+    "grunt-contrib-nodeunit": "~0.2.0",
+    "grunt": "~0.4.4"
+  },
+  "peerDependencies": {
+    "grunt": "~0.4.4"
+  },
+  "optionalDependencies": {
+    "phantomjs": "~1.9.2-2"
+  },
+  "dependencies": {
+    "which": "~1.0.5",
+    "phantomjs": "~1.9.2-2"
+  },
+  "keywords": [
+    "gruntplugin",
+    "render",
+    "dom",
+    "once"
+  ]
+}
