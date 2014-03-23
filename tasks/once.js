@@ -41,7 +41,7 @@ module.exports = function (grunt) {
 
             src.forEach(function (file) {
                 var code = grunt.file.read(file),
-                    tempfile = '~tmp-' + file + '.tmp';
+                    tempfile = f.dest + '~tmp';
                 
                 phantom = grunt.util.spawn({
                     cmd: binPath,
