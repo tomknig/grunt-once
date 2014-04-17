@@ -16,7 +16,11 @@ module.exports = function (grunt) {
 			binPath,
 			which,
 			path = require('path'),
-			asset = path.join.bind(null, __dirname, '..');
+			asset = path.join.bind(null, __dirname, '..'),
+			options = this.options({
+				mergeStylesheets: false,
+				mergeScripts: false
+			});
 
 		try {
 			which = require('which');
@@ -43,8 +47,7 @@ module.exports = function (grunt) {
 			}
 
 			src.forEach(function (file) {
-				var code = grunt.file.read(file),
-					tempfile = f.dest + '~tmp';
+				var tempfile = f.dest + '~tmp';
 
 				phantom = grunt.util.spawn({
 					cmd: binPath,
