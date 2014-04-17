@@ -51,7 +51,7 @@ module.exports = function (grunt) {
 
 				phantom = grunt.util.spawn({
 					cmd: binPath,
-					args: [asset('lib/phantom.js'), path.join(__dirname, '../../../', file), tempfile]
+					args: [asset('lib/phantom.js'), path.join(__dirname, '../../../', file), tempfile, options]
 				}, function () {
 					var html = grunt.file.read(tempfile);
 					grunt.file.delete(tempfile);
