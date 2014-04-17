@@ -1,7 +1,7 @@
 {
   "name": "grunt-once",
   "description": "Opens HTML files with PhantomJS and saves their DOM to a new file when certain criteria are met.",
-  "version": "0.5",
+  "version": "0.5.0",
   "homepage": "https://github.com/tomknig/grunt-once",
   "author": {
     "name": "Tom König",
