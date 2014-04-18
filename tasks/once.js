@@ -18,8 +18,11 @@ module.exports = function (grunt) {
 			path = require('path'),
 			asset = path.join.bind(null, __dirname, '..'),
 			options = this.options({
+				mergedStylesheetPath: '',
 				mergeStylesheets: false,
-				mergeScripts: false
+				mergedScriptPath: '',
+				mergeScripts: false,
+				render: true
 			});
 
 		try {
@@ -52,7 +55,7 @@ module.exports = function (grunt) {
 
 				phantom = grunt.util.spawn({
 					cmd: binPath,
-					args: [asset('lib/phantom.js'), path.join(__dirname, '../../../', file), tempfile, options.mergeStylesheets, options.mergeScripts]
+					args: [asset('lib/phantom.js'), path.join(__dirname, '../../../', file), tempfile, options.mergeScripts, options.mergeStylesheets, options.mergedScriptPath, options.mergedStylesheetPath, options.render]
 				}, function () {
 					var html = grunt.file.read(tempfile);
 					grunt.file.delete(tempfile);
